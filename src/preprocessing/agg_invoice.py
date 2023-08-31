@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 def agg_invoice_num_mode_no_monthly_weighting(
         df_invoice,

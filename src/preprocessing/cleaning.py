@@ -1,3 +1,5 @@
+import pandas as pd
+
 def convert_dtype_cat_date(df: pd.DataFrame) -> pd.DataFrame:
     df_new = df.copy()
     convert_to_category = [
