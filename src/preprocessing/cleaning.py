@@ -9,12 +9,7 @@ def convert_dtype_cat_date (df:pd.DataFrame)->pd.DataFrame:
 
     for category in convert_to_category:
         df_new[category]=df_new[category].astype('category')
-
-    for datetime in convert_to_datetime:
-
-        df_new[datetime] = pd.to_datetime(df_new[datetime])
-
+        
     df_new = df_new.rename(columns={'disrict':'district'})
-    
-
+   
     return df_new
