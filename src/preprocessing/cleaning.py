@@ -1,3 +1,5 @@
+""" Module to provide cleaning functions for the data."""
+
 import pandas as pd
 
 def convert_dtype_cat_date(df: pd.DataFrame) -> pd.DataFrame:
