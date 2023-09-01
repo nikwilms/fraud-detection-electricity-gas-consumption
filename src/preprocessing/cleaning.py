@@ -20,7 +20,7 @@ def convert_dtype_cat_date(df: pd.DataFrame) -> pd.DataFrame:
 
     df_new = df_new.rename(columns={"disrict": "district"})
 
-    outlier_col = [
+    '''outlier_col = [
         "consommation_level_1",
         "consommation_level_2",
         "consommation_level_3",
@@ -31,6 +31,6 @@ def convert_dtype_cat_date(df: pd.DataFrame) -> pd.DataFrame:
     for col in outlier_col:
         threshold = 3 * df_new[col].std()
         mask_outliers = df_new[col] > df_new[col].mean() + threshold
-        df_new = df_new[~mask_outliers]
+        df_new = df_new[~mask_outliers]'''
         
     return df_new
