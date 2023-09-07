@@ -4,7 +4,7 @@ This project is a part of the [neuefische GmbH Data Science Bootcamp](https://ww
 
 #### -- Project Status: Completed
 
-## Contributors
+## Team
 [Marius Bosch](https://www.linkedin.com/in/marius-bosch-435158126/), [Felix Geyer](https://www.linkedin.com/in/felix-geyer-a273bb12a/), [Daniel Marques Rodrigues](https://www.linkedin.com/in/daniel-marques-rodrigues-581b55127/), 
 [Nikita Wilms](https://www.linkedin.com/in/nikita-wilms/)
 
