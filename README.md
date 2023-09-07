@@ -55,56 +55,56 @@ The data for this project is provided by STEG and can be downloaded from the Zin
 ## Generated Project Contents
 
 ```
-├── .venv                    <- environment definition for ensuring consistent setup across environments
-├── archive                  <- notebooks for testing data
-├── data                     <- files for challenge
-│   ├── test                 <- test dataset
-│   ├── train                <- train dataset
+├── .venv                                      <- environment definition for ensuring consistent setup across environments
+├── archive                                    <- notebooks for testing data
+├── data                                       <- files for challenge
+│   ├── test                                   <- test dataset
+│   ├── train                                  <- train dataset
 │   ├── data_ready_for_models_smart_agg.pkl    <- aggregated dataset, saved as pickle
-│   ├── data_test.pkl        <- for testing
+│   ├── data_test.pkl                          <- for testing
 │   └── SampleSubmission.csv                   <- sample for submission
 │
-├── images                   how to setup a kanban board
-├── models                   <- models to train
-│   ├── decision_tree        <- decision tree model
+├── images                                     <-how to setup a kanban board
+├── models                                     <- models to train
+│   ├── decision_tree                          <- decision tree model
 │   │   ├── dectree_raw_smart.pkl              <- decision tree train and test prediction, saved as pickle file 
-│   ├── xgboost              <- xgboost model
+│   ├── xgboost                                <- xgboost model
 │   │   ├── xgboost_grid_raw_smart_agg.pkl     <- xgboost train and test prediction on aggregated dataset, after grid search, saved as pickle file
 │   │   ├── xgboost_grid_raw.pkl               <- xgboost train and test prediction on raw dataset, after grid search, saved as pickle file
 │   │   ├── xgboost_grid_raw_smote.pkl         <- xgboost train and test prediction with SMOTE, after grid search, saved as pickle file
 │   └── log_regression_DMR.pynb                <- decision tree model
 │
-├── notebooks                <- notebooks for feature engineering and modelling
+├── notebooks                                  <- notebooks for feature engineering and modelling
 │   ├── Feature_engineering_consumption        <- aggregate and sum up the consumption columns for each customer
 │   ├── grid_search_xgboost_smart_agg          <- xgboost prediction and result with aggregated dataset
 │   ├── grid_search_xgboost_smote              <- xgboost prediction and result with SMOTE
 │   ├── grid_search_xgboost                    <- xgboost prediction and result
 │   └── predict_competition                    <- prediction for challenge submission
 │
-├── extras                   <- checking for overfitting with MSE
+├── extras                                     <- comparing MSE
 │   ├── feature_engineering.py                 <- transform altitude, drop columns and check for missing values
-│   ├── predict.py           <- MSE for test
-│   └── train.py             <- MSE for train
+│   ├── predict.py                             <- MSE for test
+│   └── train.py                               <- MSE for train
 │ 
-├── src                      <- code for use in this project
-│   ├── evaluation           <- evaluating the models output
+├── src                                        <- code for use in this project
+│   ├── evaluation                             <- evaluating the models output
 │   │   └── evaluation_metrics.py              <- evaluation metrics
-│   ├── basemodel            <- model to beat prediction
-│   │   └──basemodel.py      <- prediction for basemodel
-│   └── preprocessing        <- preprocessing the data
-│       ├── agg_invoice.py   <- aggregate the invoice dataset with monthly weighting
-│       └── cleaning.py      <- rename columns and convert datatype
+│   ├── basemodel                              <- model to beat prediction
+│   │   └──basemodel.py                        <- prediction for basemodel
+│   └── preprocessing                          <- preprocessing the data
+│       ├── agg_invoice.py                     <- aggregate the invoice dataset with monthly weighting
+│       └── cleaning.py                        <- rename columns and convert datatype
 │ 
-├── Fraud_detection_invoice_report_minimal <- EDA report
-├── Fraud_detection_ML_team_smart_agg      <- EDA and modeling
-├── Fraud_detection_ML_team                <- EDA and modeling
-├── Fraud_Detection_Starter                <- starter notebook for challenge
-├── how_to_pickle            <- pickle how-to
-├── Makefile                 <- install requirements
+├── Fraud_detection_invoice_report_minimal     <- EDA report
+├── Fraud_detection_ML_team_smart_agg          <- EDA and modeling
+├── Fraud_detection_ML_team                    <- EDA and modeling
+├── Fraud_Detection_Starter                    <- starter notebook for challenge
+├── how_to_pickle                              <- pickle how-to
+├── Makefile                                   <- install requirements
 ├── Presentation Slided Fraud Detection in Electricity and Gas Consumption Challenge
 ├── LICENSE
 ├── README.md
-└── requirements.txt         <- The requirements file for reproducing the analysis environment, e.g.
+└── requirements.txt                           <- The requirements file for reproducing the analysis environment, e.g.
 ```
 ## Requirements and Environment
 
