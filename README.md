@@ -1,82 +1,110 @@
-# Template Repo for ML Project
 
-This template repo will give you a good starting point for your second project. Besides the files used for creating a virtual environment, you will find a simple example of how to build a simple model in a python script. This is maybe the simplest way to do it. We train a simple model in the jupyter notebook, where we select only some features and do minimal cleaning. The output is then stored in simple python scripts.
+# Fraud Detection in Electricity and Gas Consumption Challenge
+This project is a part of the [neuefische GmbH Data Science Bootcamp](https://www.neuefische.de/bootcamp/data-science).
 
-The data used for this is: [coffee quality dataset](https://github.com/jldbc/coffee-quality-database).
+#### -- Project Status: Completed
 
----
+## Contributors
+[Marius Bosch](https://www.linkedin.com/in/marius-bosch-435158126/), [Felix Geyer](https://www.linkedin.com/in/felix-geyer-a273bb12a/), [Daniel Marques Rodrigues](https://www.linkedin.com/in/daniel-marques-rodrigues-581b55127/), 
+[Nikita Wilms](https://www.linkedin.com/in/nikita-wilms/)
 
-## Set up a Kanban board on github
+## Project Objective
+Using the client’s billing history, the aim of the challenge is to detect and recognize clients involved in fraudulent activities.
 
-Go to ML-Project Template.
+The solution will enhance the company’s revenues and reduce the losses caused by such fraudulent activities.
 
-Click on "Use this Template" (Green button)
-![alt text](./images/step_1a.png)
+#### [Project Link](https://zindi.africa/competitions/fraud-detection-in-electricity-and-gas-consumption-challenge)
+### Methods Used
+* Feature engineering
+* Data Visualization
+* Exploratory Data Analysis
+* Machine Learning
 
-Create new project with relevant name, the owner should be your own account and **not** Neuefische. 
+### Tech Stack
+* Pandas, jupyter
+* Python
+* NumPy
+* Matplotlib
+* Seaborn
+* scikit-learn (sklearn)
+* Imbalanced-Learn (imblearn)
+* Various Scikit-Learn Machine Learning Algorithms
+* Various Preprocessing Tools
+* Custom Preprocessing Functions
 
-![alt text](./images/step_2.png)
+## Project Overview
+The goal of this project is to develop a machine learning model to detect fraudulent electricity and gas consumption in Tunisia. The data provided by STEG includes client information and billing history from 2005 to 2019. The challenge is to identify the clients who are likely to be involved in fraudulent activities, such as tampering with their meters or using unauthorized connections.
 
-In your newly create repo, navigate to "Projects", and then click on "Add project" (green button). Normally you don't have created a project yet, so you can click the arrow navigation to create project on your profile. This project can be added at the end to your repository.
-![alt text](./images/add_project.png)
+## Data Sources
+The data for this project is provided by STEG and can be downloaded from the Zindi platform. The data is composed of two files:
+* `Client_train.csv`: This file contains information about the clients, such as their district, category, region, and creation date.
+* `Invoice_train.csv`: This file contains information about the clients' billing history, such as the date of the invoice, the type of tax, the counter number, and the consumption levels.
 
+## Questions and Hypotheses
 
-You will be guided to your profiles projects. Click here on the green button "New project" to create a new project. Choose "board" view and **not** "table" view, then click "create".
-Good, now you have a board view. 
-![alt text](./images/boardview.png)
+* What are the factors that are most likely to be associated with fraudulent electricity and gas consumption?
+* Can we develop a machine learning model that can accurately identify fraudulent clients?
+* How can we improve the accuracy of our model?
 
-Now change the name of your board, to match that of your chosen ML project. 
-
-Next, assign rights to all your team members by clicking on the 3 dots on the top right of the board, and then go to "settings". 
-
-Next, click on "Manage Access"
-Add your team mates by Searching for their github handle in the search window.
-
-Change their Role from ‘View’ to ‘Admin’. 
-Click on the green button “Invite” to add them. Repeat for all team members.
-![alt text](./images/team_access.png
-)
-
-Next, add action items with the relevant name e.g. “load data”, "get statistics", etc.
-
-Convert added item to issue by clicking on the 3 dots on the particular added item.
-
-Then select the repo you created in step3 for the issue to be added. (Select the project repo example “Fraud detection”)
+## Blockers and Challenges
+* The data is imbalanced, meaning that there are more non-fraudulent clients than fraudulent clients.
+* Every client has multiple invoices
+* Feature engineering, to give the model better information to predict
 
 
+## Generated Project Contents
 
-When in project repo, Go to issues, then go to milestones. 
-
-Click on ”Add milestone”.
-
-Give the milestone a due date and description as per the example provided by the coaches. 
-
-Add description of: 
-
-A) What needs to be completed to be done with the milestone
-
-B) The definition of done: what will your result look like when you have completed the milestone? (check the provided format)
-![alt text](./images/create_milestone.png)
-
-Now navigate to "issues".
-
-Assign issues to milestones, give it assignees (people who will work on the task). 
-![alt text](./images/tasks_to_mileston.png)
-
-### Optional: Add workflows
-
-Workflows can help you keep your kanban board automatically on track. 
-
-Select the project created in the steps above.  
-
-Click on the 3 dots to the far right of the board (...)
-
-Select workflow as the first option. 
-
-Activate the ones you feel necessary to your project
-
-Go back to your project repository (fraud detection))
-
+```
+├── .venv                    <- environment definition for ensuring consistent setup across environments
+├── archive                  <- notebooks for testing data
+├── data                     <- files for challenge
+│   ├── test                 <- test dataset
+│   ├── train                <- train dataset
+│   ├── data_ready_for_models_smart_agg.pkl    <- aggregated dataset, saved as pickle
+│   ├── data_test.pkl        <- for testing
+│   └── SampleSubmission.csv                   <- sample for submission
+│
+├── images                   how to setup a kanban board
+├── models                   <- models to train
+│   ├── decision_tree        <- decision tree model
+│   │   ├── dectree_raw_smart.pkl              <- decision tree train and test prediction, saved as pickle file 
+│   ├── xgboost              <- xgboost model
+│   │   ├── xgboost_grid_raw_smart_agg.pkl     <- xgboost train and test prediction on aggregated dataset, after grid search, saved as pickle file
+│   │   ├── xgboost_grid_raw.pkl               <- xgboost train and test prediction on raw dataset, after grid search, saved as pickle file
+│   │   ├── xgboost_grid_raw_smote.pkl         <- xgboost train and test prediction with SMOTE, after grid search, saved as pickle file
+│   └── log_regression_DMR.pynb                <- decision tree model
+│
+├── notebooks                <- notebooks for feature engineering and modelling
+│   ├── Feature_engineering_consumption        <- aggregate and sum up the consumption columns for each customer
+│   ├── grid_search_xgboost_smart_agg          <- xgboost prediction and result with aggregated dataset
+│   ├── grid_search_xgboost_smote              <- xgboost prediction and result with SMOTE
+│   ├── grid_search_xgboost                    <- xgboost prediction and result
+│   └── predict_competition                    <- prediction for challenge submission
+│
+├── extras                   <- checking for overfitting with MSE
+│   ├── feature_engineering.py                 <- transform altitude, drop columns and check for missing values
+│   ├── predict.py           <- MSE for test
+│   └── train.py             <- MSE for train
+│ 
+├── src                      <- code for use in this project
+│   ├── evaluation           <- evaluating the models output
+│   │   └── evaluation_metrics.py              <- evaluation metrics
+│   ├── basemodel            <- model to beat prediction
+│   │   └──basemodel.py      <- prediction for basemodel
+│   └── preprocessing        <- preprocessing the data
+│       ├── agg_invoice.py   <- aggregate the invoice dataset with monthly weighting
+│       └── cleaning.py      <- rename columns and convert datatype
+│ 
+├── Fraud_detection_invoice_report_minimal <- EDA report
+├── Fraud_detection_ML_team_smart_agg      <- EDA and modeling
+├── Fraud_detection_ML_team                <- EDA and modeling
+├── Fraud_Detection_Starter                <- starter notebook for challenge
+├── how_to_pickle            <- pickle how-to
+├── Makefile                 <- install requirements
+├── Presentation Slided Fraud Detection in Electricity and Gas Consumption Challenge
+├── LICENSE
+└── requirements.txt         <- The requirements file for reproducing the analysis environment, e.g.
+```
 ## Requirements and Environment
 
 Requirements:
@@ -93,26 +121,5 @@ source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
-
-## Usage
-
-In order to train the model and store test data in the data folder and the model in models run:
-
-```bash
-#activate env
-source .venv/bin/activate
-
-python example_files/train.py  
-```
-
-In order to test that predict works on a test set you created run:
-
-```bash
-python example_files/predict.py models/linear_regression_model.sav data/X_test.csv data/y_test.csv
-```
-
-## Limitations
-
-Development libraries are part of the production environment, normally these would be separate as the production code should be as slim as possible.
 
 
