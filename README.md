@@ -102,7 +102,7 @@ The data for this project is provided by STEG and can be downloaded from the Zin
 ├── how_to_pickle                              <- pickle how-to
 ├── Makefile                                   <- install requirements
 ├── Presentation Slided Fraud Detection in 
-    Electricity and Gas Consumption Challenge
+│   Electricity and Gas Consumption Challenge
 ├── LICENSE
 ├── README.md
 └── requirements.txt                           <- The requirements file for reproducing the analysis environment, e.g.
